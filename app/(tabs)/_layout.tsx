@@ -66,10 +66,104 @@ export default function TabLayout() {
             <TabBarIcon
               name={focused ? "code-slash" : "code-slash-outline"}
               color={color}
-            />
+            />    
           ),
         }}
       />
+
+      {/* Indicative Tab */}
+      <Tabs.Screen
+        name="indicative"
+        options={{
+          title: "Indicative",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? "code-slash" : "code-slash-outline"}
+              color={color}
+            />    
+          ),
+        }}
+      />
+         
+          
+      
+      {/* Registry Tab*/}
+      <Tabs.Screen
+          name="registry"
+          options={{
+            title: "Registry",	
+            tabBarIcon: ({ color, focused }) => (
+              <TabBarIcon
+                name={focused ? "code-slash" : "code-slash-outline"}
+                color={color}
+              />
+              
+            ),
+        }}
+      />
+
+         {/* Dashboard Tab*/}
+         <Tabs.Screen
+          name="dashboard"
+          options={{
+            title: "Dashboard",	
+            tabBarIcon: ({ color, focused }) => (
+              <TabBarIcon
+                name={focused ? "code-slash" : "code-slash-outline"}
+                color={color}
+              />
+              
+            ),
+        }}
+      />
+
+      {/* Household Confirmation Tab*/}
+      <Tabs.Screen
+          name="household confirmation"
+          options={{
+            title: "Household Confirmation",	
+            tabBarIcon: ({ color, focused }) => (
+              <TabBarIcon
+                name={focused ? "code-slash" : "code-slash-outline"}
+                color={color}
+              />
+              
+            ),
+        }}
+      />
+
+        {/* Comments Tab*/}
+        <Tabs.Screen
+          name="comments"
+          options={{
+            title: "Comments",	
+            tabBarIcon: ({ color, focused }) => (
+              <TabBarIcon
+                name={focused ? "code-slash" : "code-slash-outline"}
+                color={color}
+              />
+              
+            ),
+        }}
+      />
+
+      
+        {/* Thankyou Tab*/}
+        <Tabs.Screen
+          name="thankyou"
+          options={{
+            title: "Thankyou",	
+            tabBarIcon: ({ color, focused }) => (
+              <TabBarIcon
+                name={focused ? "code-slash" : "code-slash-outline"}
+                color={color}
+              />
+              
+            ),
+        }}
+      />
+
+
     </Tabs>
   );
 }

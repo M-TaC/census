@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   Text,
   View,
-  Button,
+  
 } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
@@ -14,37 +14,24 @@ import React from "react";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
-
-  const handleDashboard = () => {
-    // code to handle the browse action
-    (navigation as any).navigate("dashboard");
-  };
-
+ 
   const handleSignIn = () => {
-    (navigation as any).navigate("auth");
-  };
-
-  const testRoute = () => {
-    (navigation as any).navigate("test");
+    (navigation as any).navigate("authentication");
   };
 
   return (
     <View style={styles.container}>
-      {/* Two Text Messages */}
-      <Text style={styles.headerText}>Civil Registry Portal</Text>
-      <Text style={styles.subText}>
-        Explore and manage your content with ease.
-      </Text>
+      <Image source={require('@/assets/images/census-1.png')} style={styles.Image} />
 
-      <TouchableOpacity style={styles.button} onPress={() => handleDashboard()}>
-        <Text style={styles.buttonText}>Data Entry</Text>
-      </TouchableOpacity>
+      <Image source={require('@/assets/images/census-2.png')} style={styles.Image} />
 
+
+    
       <TouchableOpacity
         style={styles.buttonSecondary}
         onPress={() => handleSignIn()}
       >
-        <Text style={styles.buttonText}>Sign In</Text>
+        <Text style={styles.buttonText}>Lets Get Started</Text>
       </TouchableOpacity>
     </View>
   );
@@ -57,23 +44,34 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
-    backgroundColor: "#f5f5f5", // Light background for contrast against buttons
+    backgroundColor: "#e6e600", // Light background for contrast against buttons
   },
   headerText: {
     fontSize: 30,
     fontWeight: "bold",
-    color: "#333",
+    color: "#ffffff",
     textAlign: "center",
     marginBottom: 10,
+    
+  },
+
+  censusInfo: {
+    color: '#ffcc00',
+    fontSize: 16,
+    textAlign: 'center',
+    marginVertical: 5,
+    fontWeight:"condensed"
   },
   subText: {
     fontSize: 16,
-    color: "#666",
+    color: "#b30000",
     textAlign: "center",
     marginBottom: 40, // Space between text and buttons
+    fontWeight:"condensed",
+    
   },
   button: {
-    backgroundColor: "#4CAF50", // Modern green color
+    backgroundColor: "#ffcc00", // Modern green color
     borderRadius: 12,
     paddingVertical: 15,
     paddingHorizontal: 50,
@@ -85,7 +83,7 @@ const styles = StyleSheet.create({
     elevation: 5, // Elevation for Android
   },
   buttonSecondary: {
-    backgroundColor: "#2196F3", // Stylish blue for Sign In/Sign Up buttons
+    backgroundColor: "#a6a6a6", // Stylish blue for Sign In/Sign Up buttons
     borderRadius: 12,
     paddingVertical: 15,
     paddingHorizontal: 50,
@@ -97,9 +95,17 @@ const styles = StyleSheet.create({
     elevation: 5, // Elevation for Android
   },
   buttonText: {
-    color: "#fff",
+    color: "#000000",
     fontSize: 18,
-    fontWeight: "600",
+    fontWeight: "bold",
     textAlign: "center",
+    marginTop:10,
   },
+  Image:{
+    width:300,
+    height:200,
+    marginBottom: 20, // Adjust space between text and button
+    
+  }
+  
 });
